@@ -10,14 +10,14 @@ function clearFields() {
 };
 
 function getExchange(response) {
-  if (response.)
+  if (response.result) {
+    const result = response.conversion_result
+    $("#result").html(`${result}`)
+  }
 }
 
-
-
-
 $(document).ready(function () {
-  $("#form").submit(function () {
+  $("#moneyForm").submit(function () {
     let userAmount = $("#userAmount").val();
     let exchangeTo = $("#exchangeTo").val();
     clearFields();
@@ -27,3 +27,6 @@ $(document).ready(function () {
       });
   });
 });
+
+
+
