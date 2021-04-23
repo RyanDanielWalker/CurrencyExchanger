@@ -7,12 +7,12 @@ import Exchanger from './js/exchanger.js';
 function clearFields() {
   $("#userAmount").val("");
   $("#exchangeTo").val("");
-};
+}
 
 function getExchange(response) {
   if (response.result) {
-    const result = response.conversion_result
-    $("#result").html(`${result}`)
+    const result = response.conversion_result;
+    $("#result").html(`<p>${result}</p>`);
   }
 }
 
