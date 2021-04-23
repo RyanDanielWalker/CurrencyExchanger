@@ -10,8 +10,10 @@ function clearFields() {
 }
 
 function getExchange(response, userAmount) {
-  if (response.result) {
-    $("#result").html(`${userAmount} USD converts to ${(response.conversion_result).toFixed(2)} ${response.target_code}`);
+  if (response.conversion_result) {
+    $("#result").html(`${parseInt(userAmount).toFixed(2)} USD converts to ${(response.conversion_result).toFixed(2)} ${response.target_code}`);
+  } else if (response.result === "error") {
+    $("#showErrors").html(`Sorry, an error occurred: ${response.error}`);
   }
 }
 
