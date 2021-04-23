@@ -3,7 +3,7 @@
   "name": "currency-exchanger",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
