@@ -44,6 +44,7 @@ There were no bugs found.
 * npm
 * Popper
 * Exchange Rate API
+* Adobe Photoshop 
 
 
 ### License
