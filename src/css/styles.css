@@ -2,11 +2,16 @@ body {
   text-align: center;
 }
 #shower {
-  display: none;
+  /* display: none; */
+  background-color: #cce0a4;
 }
 #conversionCard {
+  margin: auto;
+  width: 60vw;
+  max-width: 700px;
   margin-top: 5vh;
   background-color: #80B662;
+  margin-bottom: 10px;
 }
 p {
   color: gray;
@@ -29,6 +34,15 @@ p {
 }
 button {
   border: solid #aaa9ad 1px;
-  width: 40%;
+  width: 25%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 100px;
+}
+#musicPlayer {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  margin: 0 10 0 10;
 }
 
