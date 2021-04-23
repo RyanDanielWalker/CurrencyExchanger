@@ -1,9 +1,18 @@
 body {
   text-align: center;
+  background-color: #80b662 ;
 }
 #shower {
   /* display: none; */
   background-color: #cce0a4;
+  margin: auto;
+  width: 60vw;
+  max-width: 700px;
+  margin-top: 5vh;
+  background-color: #80B662;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: 0 0 15px 10px #d4af37;
 }
 #conversionCard {
   margin: auto;
@@ -12,6 +21,7 @@ body {
   margin-top: 5vh;
   background-color: #80B662;
   margin-bottom: 10px;
+  box-shadow: 0 0 15px 10px #d4af37;
 }
 p {
   color: gray;
