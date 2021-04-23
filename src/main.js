@@ -18,6 +18,7 @@ function getExchange(response, userAmount) {
     $("#result").html("");
   } else {
     $("#result").html(`${parseInt(userAmount).toFixed(2)} USD converts to ${(response.conversion_result).toFixed(2)} ${response.target_code}`);
+    $("#showErrors").html("");
   }
 }
 
@@ -26,12 +27,15 @@ $(document).ready(function () {
     event.preventDefault();
     let userAmount = $("#userAmount").val();
     let exchangeTo = ($("#exchangeTo").val()).substring(0, 3);
-    console.log(userAmount, exchangeTo);
-    clearFields();
-    Exchanger.exchangeCurrency(exchangeTo, userAmount)
-      .then(function (response) {
-        getExchange(response, userAmount);
-      });
+    if (userAmount && exchangeTo) {
+      Exchanger.exchangeCurrency(exchangeTo, userAmount)
+        .then(function (response) {
+          getExchange(response, userAmount);
+        });
+      clearFields();
+    } else {
+      alert('Please complete all forms!');
+    }
   });
 });
 
