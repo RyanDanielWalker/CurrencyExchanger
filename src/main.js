@@ -10,10 +10,12 @@ function clearFields() {
 }
 
 function getExchange(response, userAmount) {
-  if (response.conversion_result) {
-    $("#result").html(`${parseInt(userAmount).toFixed(2)} USD converts to ${(response.conversion_result).toFixed(2)} ${response.target_code}`);
+  if (response["error-type"] === "unsupported-code") {
+    $("#showErrors").html(`We're sorry, that type of currency does not exist. Please try again.`);
   } else if (response.result === "error") {
-    $("#showErrors").html(`Sorry, an error occurred: ${response.error}`);
+    $("#showErrors").html(`We're sorry, an error has occurred: ${response["error-type"]}. Please try again.`);
+  } else {
+    $("#result").html(`${parseInt(userAmount).toFixed(2)} USD converts to ${(response.conversion_result).toFixed(2)} ${response.target_code}`);
   }
 }
 
@@ -30,6 +32,4 @@ $(document).ready(function () {
       });
   });
 });
-
-
 
