@@ -17,9 +17,11 @@ function getExchange(response) {
 }
 
 $(document).ready(function () {
-  $("#moneyForm").submit(function () {
+  $("#moneyForm").submit(function (event) {
+    event.preventDefault();
     let userAmount = $("#userAmount").val();
-    let exchangeTo = $("#exchangeTo").val();
+    let exchangeTo = ($("#exchangeTo").val()).substring(0, 3);
+    console.log(userAmount, exchangeTo);
     clearFields();
     Exchanger.exchangeCurrency(exchangeTo, userAmount)
       .then(function (response) {
