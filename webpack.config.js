@@ -17,7 +17,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new Dotenv(),
     new HtmlWebpackPlugin({
-      title: '',
+      title: 'Currency Exchanger',
       template: './src/index.html',
       inject: 'body'
     })
@@ -32,6 +32,25 @@ module.exports = {
         ]
       },
       {
+        test: /\.(gif|png|jpe?g)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              esModule: false,
+              name: '[name].[ext]',
+              outputPath: 'assets/images/'
+            }
+          }
+        ]
+      },
+      {
+        test: /\.html$/,
+        use: [
+          'html-loader'
+        ]
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "eslint-loader"
@@ -39,3 +58,4 @@ module.exports = {
     ]
   }
 };
+
