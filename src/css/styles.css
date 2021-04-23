@@ -1,21 +1,34 @@
 body {
   text-align: center;
 }
-.input-icon {
-  position: relative;
+#shower {
+  display: none;
 }
-.input-icon > i {
-  position: absolute;
-  display: block;
-  transform: translate(0, -50%);
-  top: 50%;
-  pointer-events: none;
-  width: 25px;
+#conversionCard {
+  margin-top: 5vh;
+  background-color: #80B662;
+}
+p {
+  color: gray;
+  font-style: italic;
+}
+.form-control, button {
+  margin: auto;
+  width: 65%;
+  color: black;
+  background-color: #cce0a4;
   text-align: center;
-	font-style: normal;
 }
-.input-icon > input {
-  padding-left: 25px;
-	padding-right: 0;
+.form-control:focus, button:focus {
+  background-color: #cce0a4;
+  border-color: #aaa9ad;
+  box-shadow: 0 0 0 0.2rem #d4af37;
+}
+.form-control:hover, button:hover{
+  background-color: #d4af37;
+}
+button {
+  border: solid #aaa9ad 1px;
+  width: 40%;
 }
 

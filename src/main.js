@@ -35,6 +35,7 @@ $(document).ready(function () {
           getExchange(response, userAmount);
         });
       clearFields();
+      $("#shower").fadeIn();
     } else {
       alert('Please complete all forms!');
     }
