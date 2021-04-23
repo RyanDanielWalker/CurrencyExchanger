@@ -1,7 +1,7 @@
 export default class Exchanger {
-  static exchangeCurrency(userAmount, userExchange) {
+  static exchangeCurrency(userAmount, exchangeTo) {
     const apiKey = process.env.API_KEY
-    return fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/pair/USD/${userExchange}/${userAmount}`)
+    return fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/pair/USD/${exchangeTo}/${userAmount}`)
       .then(function (response) {
         if (!response.ok) {
           throw Error(response.statusText);
