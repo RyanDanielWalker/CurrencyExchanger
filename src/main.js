@@ -10,12 +10,14 @@ function clearFields() {
 }
 
 function getExchange(response, userAmount) {
-  if (response["error-type"] === "unsupported-code") {
-    $("#showErrors").html(`We're sorry, that type of currency does not exist. Please try again.`);
-    $("#result").html("");
-  } else if (response.result === "error") {
-    $("#showErrors").html(`We're sorry, an error has occurred: ${response["error-type"]}. Please try again.`);
-    $("#result").html("");
+  if (response.result === "error") {
+    if (response["error-type"] === "unsupported-code") {
+      $("#showErrors").html(`We're sorry, that type of currency does not exist. Please try again.`);
+      $("#result").html("");
+    } else {
+      $("#showErrors").html(`We're sorry, an error has occurred: ${response["error-type"]}. Please try again.`);
+      $("#result").html("");
+    }
   } else {
     $("#result").html(`${parseInt(userAmount).toFixed(2)} USD converts to ${(response.conversion_result).toFixed(2)} ${response.target_code}`);
     $("#showErrors").html("");
@@ -38,4 +40,7 @@ $(document).ready(function () {
     }
   });
 });
+
+
+
 

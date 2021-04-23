@@ -11,28 +11,31 @@
 <body>
 
   <div class="container">
-    <form id="moneyForm">
-      <iframe style="border: 0; width: 100%; height: 42px;"
-        src="https://bandcamp.com/EmbeddedPlayer/album=2680033782/size=small/bgcol=333333/linkcol=2ebd35/track=2070342874/transparent=true/"
-        seamless><a href="https://jamespants.bandcamp.com/album/welcome">Welcome by James Pants</a></iframe>
-      <h3 id="dollar">Convert the dollar</h3>
-      <div class="input-icon">
-        <input type="number" min="0" step=".01" class="form-control" id="userAmount" placeholder="Enter dollar amount">
-        <i>$</i>
-      </div>
-      <h3>to:</h3>
-      <select class="form-control" id="exchangeTo">
-        <option selected></option>
-        <option val="EUR">EUR - Euro</option>
-        <option val="JPY">JPY - Yen</option>
-        <option val="CNY">CNY - Renminbi</option>
-        <option val="BRL">BRL - Real</option>
-        <option val="MXN">MXN - Peso</option>
-        <option val="XXL">RYN - $Ryan</option>
-      </select>
-      <p>Select a currency from the menu</p>
-      <button type="submit">Submit</button>
-    </form>
+    <div class="card">
+      <form id="moneyForm">
+        <iframe style="border: 0; width: 100%; height: 42px;"
+          src="https://bandcamp.com/EmbeddedPlayer/album=2680033782/size=small/bgcol=333333/linkcol=2ebd35/track=2070342874/transparent=true/"
+          seamless><a href="https://jamespants.bandcamp.com/album/welcome">Welcome by James Pants</a></iframe>
+        <h3 id="dollar">Convert the dollar</h3>
+        <div class="input-icon">
+          <input type="number" min="0" step=".01" class="form-control" id="userAmount"
+            placeholder="Enter dollar amount">
+          <i>$</i>
+        </div>
+        <h3>to:</h3>
+        <select class="form-control" id="exchangeTo">
+          <option selected></option>
+          <option val="EUR">EUR - Euro</option>
+          <option val="JPY">JPY - Yen</option>
+          <option val="CNY">CNY - Renminbi</option>
+          <option val="BRL">BRL - Real</option>
+          <option val="MXN">MXN - Peso</option>
+          <option val="XXL">RYN - $Ryan</option>
+        </select>
+        <p>Select a currency from the menu</p>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
 
     <div id="result">
 
