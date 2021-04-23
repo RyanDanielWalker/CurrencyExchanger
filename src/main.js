@@ -19,7 +19,7 @@ function getExchange(response, userAmount) {
       $("#result").html("");
     }
   } else {
-    $("#result").html(`${parseInt(userAmount).toFixed(2)} USD converts to ${(response.conversion_result).toFixed(2)} ${response.target_code}`);
+    $("#result").html(`${parseInt(userAmount).toFixed(2)} USD converts to ${(response.conversion_result).toFixed(2)} ${response.target_code} `);
     $("#showErrors").html("");
   }
 }
