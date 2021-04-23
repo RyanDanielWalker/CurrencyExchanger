@@ -45,6 +45,7 @@ There were no bugs found.
 * Popper
 * Exchange Rate API
 * Adobe Photoshop 
+* Bandcamp Player
 
 
 ### License
