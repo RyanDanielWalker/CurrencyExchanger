@@ -9,10 +9,9 @@ function clearFields() {
   $("#exchangeTo").val("");
 }
 
-function getExchange(response) {
+function getExchange(response, userAmount) {
   if (response.result) {
-    const result = response.conversion_result;
-    $("#result").html(`<p>${result}</p>`);
+    $("#result").html(`${userAmount} USD converts to ${(response.conversion_result).toFixed(2)} ${response.target_code}`);
   }
 }
 
@@ -25,7 +24,7 @@ $(document).ready(function () {
     clearFields();
     Exchanger.exchangeCurrency(exchangeTo, userAmount)
       .then(function (response) {
-        getExchange(response);
+        getExchange(response, userAmount);
       });
   });
 });
