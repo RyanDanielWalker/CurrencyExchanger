@@ -1,17 +1,19 @@
 body {
   text-align: center;
   background-color: #80b662 ;
+  font-family: 'Orelega One', cursive;
 }
 #shower {
-  /* display: none; */
+  display: none;
+  font-size: larger;
   background-color: #cce0a4;
   margin: auto;
-  width: 60vw;
+  width: 40vw;
   max-width: 700px;
   margin-top: 5vh;
-  background-color: #80B662;
+  background-color: #cce0a4;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 5px;
   box-shadow: 0 0 15px 10px #d4af37;
 }
 #conversionCard {
@@ -46,13 +48,23 @@ button {
   border: solid #aaa9ad 1px;
   width: 25%;
   padding: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   border-radius: 100px;
+  font-size: larger;
 }
 #musicPlayer {
   position: relative;
   margin: auto;
   width: 100%;
   margin: 0 10 0 10;
+}
+#logo {
+  margin: 10px;
+}
+#result {
+  background-color: #80B662;
+  border: solid 1px #aaa9ad;
+  padding: 5px;
+  border-radius: 5px;
 }
 

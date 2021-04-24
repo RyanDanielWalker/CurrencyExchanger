@@ -22,8 +22,9 @@ This application will allow the user to enter a USD amount and return the conver
     * Navigate to `CurrencyExchanger/` in your command line
     * Run the command `npm install` to install dependencies
     * Generate an API key at `https://www.exchangerate-api.com/`
-    * Create .env file in the root directory
-    * Store API key as API_KEY={Your API key here} *note: curly braces should be omitted*
+    * Create `.env` file in the root directory
+    * Add `.env` file to `.gitignore` file
+    * Store API key as `API_KEY={Your API key here}` in `.env` file *note: curly braces should be omitted*
     * Optionally, run the command `npm run build` to make a bundle of the files
     * Finally, run the command `npm run start` to start a development server
 5. To run tests, navigate to `my-project/` in your terminal and run the command `npm run test`
