@@ -27,7 +27,6 @@ This application will allow the user to enter a USD amount and return the conver
     * Store API key as `API_KEY={Your API key here}` in `.env` file *note: curly braces should be omitted*
     * Optionally, run the command `npm run build` to make a bundle of the files
     * Finally, run the command `npm run start` to start a development server
-5. To run tests, navigate to `my-project/` in your terminal and run the command `npm run test`
 
 ## Known Bugs
 There were no bugs found.

@@ -10,7 +10,10 @@ function clearFields() {
 }
 
 function getExchange(response, userAmount) {
-  if (response.result === "error") {
+  if (response instanceof Error) {
+    $("#showErrors").html(`We're sorry, something has gone terribly wrong. Please try again later.`);
+    $("#result").html("");
+  } else if (response.result === "error") {
     if (response["error-type"] === "unsupported-code") {
       $("#showErrors").html(`We're sorry, that type of currency does not exist. Please try again.`);
       $("#result").html("");
